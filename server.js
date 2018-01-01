@@ -9,7 +9,6 @@ const server = http.Server(app);
 const io = socketIo(server);
 
 const path = require("path");
-const admin = require("./routes/admin");
 //const products = require("./routes/products")(io);
 
 const bodyParser = require("body-parser");
@@ -38,11 +37,9 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./config/passport')(passport);
 
 app.use(express.static(path.join(__dirname,"public")));
 
-app.use('/admin',admin);
 // app.use('/products',products);
 // app.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email'}));
 // app.get('/auth/facebook/callback',passport.authenticate('facebook'),
