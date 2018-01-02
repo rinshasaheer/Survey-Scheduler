@@ -8,8 +8,8 @@ var http = require('http');
 'use strict';
  
 // ---------------------------------Start-------------------------------------------
-// Function      : 
-// Params        : 
+// Function      : cron job
+// Params        : id
 // Returns       : 
 // Author        : Jooshifa
 // Date          : 2-01-2018
