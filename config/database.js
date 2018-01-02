@@ -1,4 +1,5 @@
 module.exports = {
     database : 'mongodb://localhost/survey',
-    secret: 'mrjys'
+    secret: 'mrjys',
+    trail_period : 30
 }
