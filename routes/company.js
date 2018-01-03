@@ -25,7 +25,7 @@ new CronJob('*/1 * * * * *', function() {
         TrialCompanys.forEach(function(trailComp) {
             var expiredDate = new Date( trailComp.reg_datetime); 
             expiredDate.setDate( expiredDate.getDate() +  config.trail_period );
-                if(expiredDate >= Date.now()){
+                if(expiredDate <= Date.now()){
                     console.log(trailComp.id)
                         var extServerOptions = {
                             host: 'localhost',
